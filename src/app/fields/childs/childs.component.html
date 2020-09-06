@@ -1,0 +1,10 @@
+<form [formGroup]="parentForm">
+  <mat-form-field class="width">
+    <input
+      matInput
+      placeholder="Количество детей"
+      (keypress)="customValidate($event)"
+      formControlName="child"
+    />
+  </mat-form-field>
+</form>

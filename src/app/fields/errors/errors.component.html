@@ -1,0 +1,5 @@
+<div class="wrap width" *ngIf="errors?.length">
+  <ul>
+    <li *ngFor="let el of errors">Неверно заполнено поле <b>{{fieldsMaping(el.control)}}</b></li>
+  </ul>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="store | async as s">
+  <p *ngFor="let item of s['message'] | keyvalue">
+    <b>{{ mapping(item.key) }}</b> - {{ item.value }}
+  </p>
+</div>

@@ -1,0 +1,19 @@
+<app-errors [errors]="formErrors$ | async"></app-errors>
+
+<form [formGroup]="mainForm">
+  <app-name></app-name>
+  <app-gender></app-gender>
+  <app-age></app-age>
+  <app-relationship *ngIf="isAdult$ | async"></app-relationship>
+  <app-childs></app-childs>
+  <app-email></app-email>
+  <app-comment></app-comment>
+</form>
+
+<button
+  mat-raised-button
+  [disabled]="isSubmitDisable$ | async"
+  (click)="tryToSave()"
+>
+  Сохранить
+</button>

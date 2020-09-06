@@ -1,0 +1,14 @@
+<form [formGroup]="parentForm">
+  <mat-form-field class="width">
+    <mat-label>Коментарий</mat-label>
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      formControlName="comment"
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"
+      (keypress)="validation($event)"
+    ></textarea>
+  </mat-form-field>
+</form>

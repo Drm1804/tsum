@@ -1,0 +1,5 @@
+<form [formGroup]="parentForm">
+  <mat-form-field class="width">
+    <input matInput placeholder="ФИО"  pattern="[а-яА-Я]* [а-яА-Я]* ?[а-яА-Я]*" (keypress)="validation($event)" formControlName="name">
+  </mat-form-field>
+</form>

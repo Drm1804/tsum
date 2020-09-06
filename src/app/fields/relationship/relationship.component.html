@@ -1,0 +1,12 @@
+<form [formGroup]="parentForm">
+  <mat-form-field class="width">
+    <mat-label>Семейное положение</mat-label>
+    <mat-select formControlName="relationship">
+      <mat-select-trigger>
+        {{parentForm.value ? parentForm.value.relationship.label : ''}}
+      </mat-select-trigger>
+      <mat-option *ngFor="let el of list$ | async" [value]="el">{{el.label}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
